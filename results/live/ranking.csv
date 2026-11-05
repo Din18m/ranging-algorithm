@@ -1,0 +1,4 @@
+rank,candidate,feasible,pareto_layer,score,base_score,stability_penalty,violation_penalty,oltp_p99_ms,olap_p95_ms,freshness_lag_s,hourly_cost,repetitions
+1,sqlite,true,1,0.065307,0.017861,0.047445,0.000000,0.010,26.377,0.000,1.000,7
+2,duckdb,true,1,0.205055,0.102172,0.102883,0.000000,1.577,3.716,0.001,1.200,7
+3,sqlite_duckdb,false,1,1.722427,0.159839,0.064314,1.498274,0.017,2.448,0.171,2.000,7

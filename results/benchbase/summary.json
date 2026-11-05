@@ -1,0 +1,43 @@
+{
+  "benchmark": "BenchBase composite TPC-C/CH-benCHmark",
+  "configuration": "benchmarks/benchbase/postgres-chbenchmark.xml",
+  "metrics": {
+    "median_olap_p95_ms": 429.069,
+    "median_oltp_p99_ms": 8.959,
+    "median_throughput_rps": 206.63323055052058
+  },
+  "repetition_count": 3,
+  "runs": [
+    {
+      "elapsed_s": 60.000005126,
+      "olap_p95_ms": 393.114,
+      "olap_requests": 261,
+      "oltp_p99_ms": 11.574,
+      "oltp_requests": 11999,
+      "repetition": 1,
+      "throughput_rps": 204.33331587645705
+    },
+    {
+      "elapsed_s": 60.005000497,
+      "olap_p95_ms": 429.069,
+      "olap_requests": 453,
+      "oltp_p99_ms": 8.959,
+      "oltp_requests": 11984,
+      "repetition": 2,
+      "throughput_rps": 207.26605944485905
+    },
+    {
+      "elapsed_s": 60.000029845,
+      "olap_p95_ms": 430.721,
+      "olap_requests": 398,
+      "oltp_p99_ms": 8.873,
+      "oltp_requests": 12000,
+      "repetition": 3,
+      "throughput_rps": 206.63323055052058
+    }
+  ],
+  "units": {
+    "latency": "milliseconds",
+    "throughput": "requests/second"
+  }
+}

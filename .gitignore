@@ -17,6 +17,12 @@
 example/build/*
 dist/
 
+# Python caches and packaging output
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
 # OS / editor
 .DS_Store
 *.swp

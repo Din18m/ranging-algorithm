@@ -1,0 +1,10 @@
+{
+  "name": "transactional",
+  "oltp_share": 0.85,
+  "olap_share": 0.15,
+  "arrival_rate": 800.0,
+  "oltp_p99_slo_ms": 210.0,
+  "olap_p95_slo_ms": 2500.0,
+  "freshness_slo_s": 5.0,
+  "budget_per_hour": 3.0
+}

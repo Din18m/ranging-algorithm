@@ -1,0 +1,5 @@
+rank,candidate,feasible,pareto_layer,score,base_score,stability_penalty,violation_penalty,oltp_p99_ms,olap_p95_ms,freshness_lag_s,hourly_cost,repetitions
+1,hybrid_store,true,1,0.281466,0.271615,0.009851,0.000000,71.487,664.889,0.349,5.500,30
+2,row_column_replica,true,1,0.370036,0.363208,0.006828,0.000000,57.795,436.220,2.021,6.800,30
+3,distributed_replica,false,1,0.299440,0.288495,0.006914,0.004030,48.417,323.344,1.213,8.400,30
+4,row_store,false,1,0.897951,0.406750,0.013940,0.477260,105.036,3129.252,0.369,2.200,30

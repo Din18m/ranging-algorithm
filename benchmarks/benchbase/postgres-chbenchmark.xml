@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<parameters>
+    <type>POSTGRES</type>
+    <driver>org.postgresql.Driver</driver>
+    <url>jdbc:postgresql://host.docker.internal:55432/benchbase?sslmode=disable&amp;ApplicationName=chbenchmark&amp;reWriteBatchedInserts=true</url>
+    <username>benchbase</username>
+    <password>benchbase</password>
+    <reconnectOnConnectionFailure>true</reconnectOnConnectionFailure>
+    <isolation>TRANSACTION_SERIALIZABLE</isolation>
+    <batchsize>128</batchsize>
+    <scalefactor>1</scalefactor>
+    <loaderThreads>4</loaderThreads>
+    <terminals>1</terminals>
+
+    <works>
+        <work>
+            <warmup>10</warmup>
+            <time>60</time>
+            <rate>200</rate>
+            <weights bench="tpcc">45,43,4,4,4</weights>
+            <weights bench="chbenchmark">3,2,3,2,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5</weights>
+        </work>
+    </works>
+
+    <transactiontypes bench="chbenchmark">
+        <transactiontype><name>Q1</name></transactiontype>
+        <transactiontype><name>Q2</name></transactiontype>
+        <transactiontype><name>Q3</name></transactiontype>
+        <transactiontype><name>Q4</name></transactiontype>
+        <transactiontype><name>Q5</name></transactiontype>
+        <transactiontype><name>Q6</name></transactiontype>
+        <transactiontype><name>Q7</name></transactiontype>
+        <transactiontype><name>Q8</name></transactiontype>
+        <transactiontype><name>Q9</name></transactiontype>
+        <transactiontype><name>Q10</name></transactiontype>
+        <transactiontype><name>Q11</name></transactiontype>
+        <transactiontype><name>Q12</name></transactiontype>
+        <transactiontype><name>Q13</name></transactiontype>
+        <transactiontype><name>Q14</name></transactiontype>
+        <transactiontype><name>Q15</name></transactiontype>
+        <transactiontype><name>Q16</name></transactiontype>
+        <transactiontype><name>Q17</name></transactiontype>
+        <transactiontype><name>Q18</name></transactiontype>
+        <transactiontype><name>Q19</name></transactiontype>
+        <transactiontype><name>Q20</name></transactiontype>
+        <transactiontype><name>Q21</name></transactiontype>
+        <transactiontype><name>Q22</name></transactiontype>
+    </transactiontypes>
+
+    <transactiontypes bench="tpcc">
+        <transactiontype><name>NewOrder</name></transactiontype>
+        <transactiontype><name>Payment</name></transactiontype>
+        <transactiontype><name>OrderStatus</name></transactiontype>
+        <transactiontype><name>Delivery</name></transactiontype>
+        <transactiontype><name>StockLevel</name></transactiontype>
+    </transactiontypes>
+</parameters>

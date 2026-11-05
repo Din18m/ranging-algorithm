@@ -1,0 +1,10 @@
+{
+  "name": "balanced",
+  "oltp_share": 0.55,
+  "olap_share": 0.45,
+  "arrival_rate": 500.0,
+  "oltp_p99_slo_ms": 160.0,
+  "olap_p95_slo_ms": 2200.0,
+  "freshness_slo_s": 5.0,
+  "budget_per_hour": 8.0
+}

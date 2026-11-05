@@ -1,0 +1,46 @@
+[
+  {
+    "name": "row_store",
+    "architecture": "primary_row_store",
+    "cpu_cores": 8,
+    "memory_gb": 16.0,
+    "oltp_efficiency": 1.25,
+    "olap_efficiency": 0.35,
+    "isolation": 0.20,
+    "sync_interval_s": 0.05,
+    "hourly_cost": 2.20
+  },
+  {
+    "name": "row_column_replica",
+    "architecture": "row_store_with_column_replica",
+    "cpu_cores": 12,
+    "memory_gb": 48.0,
+    "oltp_efficiency": 1.00,
+    "olap_efficiency": 1.40,
+    "isolation": 0.90,
+    "sync_interval_s": 2.00,
+    "hourly_cost": 6.80
+  },
+  {
+    "name": "hybrid_store",
+    "architecture": "primary_column_with_delta_rows",
+    "cpu_cores": 10,
+    "memory_gb": 48.0,
+    "oltp_efficiency": 1.05,
+    "olap_efficiency": 1.05,
+    "isolation": 0.65,
+    "sync_interval_s": 0.25,
+    "hourly_cost": 5.50
+  },
+  {
+    "name": "distributed_replica",
+    "architecture": "distributed_row_store_with_column_replica",
+    "cpu_cores": 16,
+    "memory_gb": 64.0,
+    "oltp_efficiency": 0.85,
+    "olap_efficiency": 1.60,
+    "isolation": 0.95,
+    "sync_interval_s": 1.20,
+    "hourly_cost": 8.40
+  }
+]

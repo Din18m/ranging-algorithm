@@ -1,0 +1,10 @@
+{
+  "name": "live_microbenchmark",
+  "oltp_share": 0.5,
+  "olap_share": 0.5,
+  "arrival_rate": 200.0,
+  "oltp_p99_slo_ms": 2.0,
+  "olap_p95_slo_ms": 50.0,
+  "freshness_slo_s": 0.1,
+  "budget_per_hour": 2.1
+}

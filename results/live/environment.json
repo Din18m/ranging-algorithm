@@ -1,0 +1,17 @@
+{
+  "cpu_model": "Intel(R) Core(TM) 5 120U",
+  "duckdb_version": "1.5.6",
+  "logical_cpus": 12,
+  "machine": "x86_64",
+  "memory_bytes": 16436240384,
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "python_version": "3.14.4",
+  "settings": {
+    "olap_queries": 7,
+    "oltp_operations": 200,
+    "repetitions": 7,
+    "rows": 50000,
+    "seed": 20261103
+  },
+  "sqlite_version": "3.46.1"
+}

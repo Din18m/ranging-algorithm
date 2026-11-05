@@ -1,0 +1,170 @@
+[
+  {
+    "candidate": "sqlite",
+    "freshness_lag_s": 3.8907e-05,
+    "hourly_cost": 1.0,
+    "olap_p95_ms": 33.361096,
+    "oltp_p99_ms": 0.009468,
+    "repetition": 0
+  },
+  {
+    "candidate": "duckdb",
+    "freshness_lag_s": 0.000617434,
+    "hourly_cost": 1.2,
+    "olap_p95_ms": 2.11944,
+    "oltp_p99_ms": 1.220536,
+    "repetition": 0
+  },
+  {
+    "candidate": "sqlite_duckdb",
+    "freshness_lag_s": 0.140416161,
+    "hourly_cost": 2.0,
+    "olap_p95_ms": 2.005868,
+    "oltp_p99_ms": 0.015407,
+    "repetition": 0
+  },
+  {
+    "candidate": "sqlite",
+    "freshness_lag_s": 3.2785e-05,
+    "hourly_cost": 1.0,
+    "olap_p95_ms": 31.028016,
+    "oltp_p99_ms": 0.006417,
+    "repetition": 1
+  },
+  {
+    "candidate": "duckdb",
+    "freshness_lag_s": 0.000629719,
+    "hourly_cost": 1.2,
+    "olap_p95_ms": 3.073073,
+    "oltp_p99_ms": 1.065104,
+    "repetition": 1
+  },
+  {
+    "candidate": "sqlite_duckdb",
+    "freshness_lag_s": 0.1403221,
+    "hourly_cost": 2.0,
+    "olap_p95_ms": 2.179091,
+    "oltp_p99_ms": 0.009812,
+    "repetition": 1
+  },
+  {
+    "candidate": "sqlite",
+    "freshness_lag_s": 3.3587e-05,
+    "hourly_cost": 1.0,
+    "olap_p95_ms": 23.296817,
+    "oltp_p99_ms": 0.010071,
+    "repetition": 2
+  },
+  {
+    "candidate": "duckdb",
+    "freshness_lag_s": 0.000592562,
+    "hourly_cost": 1.2,
+    "olap_p95_ms": 3.2278,
+    "oltp_p99_ms": 1.097811,
+    "repetition": 2
+  },
+  {
+    "candidate": "sqlite_duckdb",
+    "freshness_lag_s": 0.231541319,
+    "hourly_cost": 2.0,
+    "olap_p95_ms": 3.71111,
+    "oltp_p99_ms": 0.011362,
+    "repetition": 2
+  },
+  {
+    "candidate": "sqlite",
+    "freshness_lag_s": 2.8574e-05,
+    "hourly_cost": 1.0,
+    "olap_p95_ms": 23.953329,
+    "oltp_p99_ms": 0.009047,
+    "repetition": 3
+  },
+  {
+    "candidate": "duckdb",
+    "freshness_lag_s": 0.001449635,
+    "hourly_cost": 1.2,
+    "olap_p95_ms": 8.492065,
+    "oltp_p99_ms": 4.258461,
+    "repetition": 3
+  },
+  {
+    "candidate": "sqlite_duckdb",
+    "freshness_lag_s": 0.276427104,
+    "hourly_cost": 2.0,
+    "olap_p95_ms": 2.636976,
+    "oltp_p99_ms": 0.01676,
+    "repetition": 3
+  },
+  {
+    "candidate": "sqlite",
+    "freshness_lag_s": 3.7907e-05,
+    "hourly_cost": 1.0,
+    "olap_p95_ms": 26.010209,
+    "oltp_p99_ms": 0.020301,
+    "repetition": 4
+  },
+  {
+    "candidate": "duckdb",
+    "freshness_lag_s": 0.0005488,
+    "hourly_cost": 1.2,
+    "olap_p95_ms": 2.987121,
+    "oltp_p99_ms": 1.117686,
+    "repetition": 4
+  },
+  {
+    "candidate": "sqlite_duckdb",
+    "freshness_lag_s": 0.13065337,
+    "hourly_cost": 2.0,
+    "olap_p95_ms": 1.978983,
+    "oltp_p99_ms": 0.027704,
+    "repetition": 4
+  },
+  {
+    "candidate": "sqlite",
+    "freshness_lag_s": 3.1444e-05,
+    "hourly_cost": 1.0,
+    "olap_p95_ms": 23.350129,
+    "oltp_p99_ms": 0.005901,
+    "repetition": 5
+  },
+  {
+    "candidate": "duckdb",
+    "freshness_lag_s": 0.000591433,
+    "hourly_cost": 1.2,
+    "olap_p95_ms": 3.013326,
+    "oltp_p99_ms": 1.146522,
+    "repetition": 5
+  },
+  {
+    "candidate": "sqlite_duckdb",
+    "freshness_lag_s": 0.140086603,
+    "hourly_cost": 2.0,
+    "olap_p95_ms": 2.697686,
+    "oltp_p99_ms": 0.008171,
+    "repetition": 5
+  },
+  {
+    "candidate": "sqlite",
+    "freshness_lag_s": 4.2663e-05,
+    "hourly_cost": 1.0,
+    "olap_p95_ms": 23.638145,
+    "oltp_p99_ms": 0.005992,
+    "repetition": 6
+  },
+  {
+    "candidate": "duckdb",
+    "freshness_lag_s": 0.000587278,
+    "hourly_cost": 1.2,
+    "olap_p95_ms": 3.102218,
+    "oltp_p99_ms": 1.131842,
+    "repetition": 6
+  },
+  {
+    "candidate": "sqlite_duckdb",
+    "freshness_lag_s": 0.139470297,
+    "hourly_cost": 2.0,
+    "olap_p95_ms": 1.929118,
+    "oltp_p99_ms": 0.030406,
+    "repetition": 6
+  }
+]

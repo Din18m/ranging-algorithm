@@ -1,0 +1,14 @@
+{
+  "benchbase_commit": "33c00473807ebd49304d114a6d769d2d2b2bbb34",
+  "cpu": "Intel Core 5 120U",
+  "docker_server": "29.3.0",
+  "java_build_image": "maven@sha256:6df31244c87c5107dd2c3f62f5634e5cb3cddedbb99b07cb8778284f576c2646",
+  "kernel": "Linux 7.0.0-38-generic x86_64",
+  "logical_processors": 12,
+  "memory_bytes": 16436240384,
+  "postgres": "PostgreSQL 17.6 (Debian 17.6-2.pgdg13+1)",
+  "postgres_settings": {
+    "max_pred_locks_per_relation": 1024,
+    "max_pred_locks_per_transaction": 1024
+  }
+}

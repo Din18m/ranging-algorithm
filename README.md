@@ -1,4 +1,77 @@
-# Шаблон научной статьи НИТУ «МИСиС» (LaTeX)
+# Ранжирование конфигураций HTAP-систем
+
+Репозиторий содержит программный прототип алгоритма RASH и научную статью, оформленную по LaTeX-шаблону НИТУ «МИСиС». Прототип проводит воспроизводимый синтетический эксперимент или микробенчмарк SQLite/DuckDB, рассчитывает веса критериев из профиля нагрузки и ранжирует конфигурации по SLO, Парето-слоям и устойчивости измерений.
+
+## Запуск алгоритма
+
+Требуется Python 3.11 или новее. Для синтетического эксперимента сторонние библиотеки не нужны.
+
+```bash
+PYTHONPATH=src python -m htap_ranker run \
+  --profile examples/profiles/balanced.json \
+  --candidates examples/candidates.json \
+  --output-dir results/balanced \
+  --repetitions 30 \
+  --seed 20261031
+```
+
+Команда создаёт `measurements.json` с отдельными повторами и `ranking.csv` с итоговым порядком. Повторное ранжирование сохранённых или импортированных измерений выполняется отдельно:
+
+```bash
+PYTHONPATH=src python -m htap_ranker rank \
+  --profile examples/profiles/balanced.json \
+  --measurements results/balanced/measurements.json \
+  --output results/balanced/ranking-repeated.csv
+```
+
+Запуск тестов:
+
+```bash
+PYTHONPATH=src python -m unittest discover -s tests -v
+```
+
+В `results/` сохранены демонстрационные прогоны для транзакционного, аналитического и сбалансированного профилей. Это результаты имитационной модели, а не измерения реальных СУБД. Формат `measurements.json` позволяет позднее подставить данные BenchBase или HATtrick.
+
+## Микробенчмарк SQLite и DuckDB
+
+Для натурного опыта установите необязательную зависимость DuckDB и запустите отдельную команду:
+
+```bash
+python -m pip install -e ".[benchmark]"
+python -m htap_ranker benchmark \
+  --profile examples/profiles/live_microbenchmark.json \
+  --output-dir results/live \
+  --rows 50000 \
+  --oltp-operations 200 \
+  --olap-queries 7 \
+  --repetitions 7 \
+  --seed 20261103
+```
+
+Команда сравнивает SQLite, DuckDB и простой разделённый контур SQLite+DuckDB. Она сохраняет сырые повторы в `measurements.json`, сведения о машине и версиях в `environment.json`, а итоговый порядок — в `ranking.csv`. Готовый анализ чувствительности лежит в `results/sensitivity.csv`.
+
+Это показательный микробенчмарк, а не промышленный HTAP-тест: СУБД работают в памяти и без конкурентных клиентов, а перенос SQLite→DuckDB выполнен построчно на Python. Эти ограничения явно учтены в статье.
+
+## BenchBase CH-benCHmark
+
+Дополнительный эксперимент использует смешанную нагрузку BenchBase: TPC-C для OLTP и запросы CH-benCHmark для OLAP. Конфигурация PostgreSQL находится в `benchmarks/benchbase/postgres-chbenchmark.xml`, а точные команды и ограничения опыта описаны в `benchmarks/benchbase/README.md`.
+
+В `results/benchbase/` сохранены три исходных CSV-файла BenchBase, служебные JSON-сводки, параметры окружения и итоговые медианы. Тест `tests/test_benchbase.py` заново вычисляет p99 OLTP, p95 OLAP и throughput из исходных файлов, поэтому GitHub Actions проверяет числа, использованные в статье.
+
+BenchBase не измеряет свежесть реплики. Его результаты не преобразуются в полный балл RASH с выдуманным значением лага, а используются как отдельная проверка конкурентной OLTP- и OLAP-нагрузки. Для полной проверки свежести в статье оставлена методика HATtrick.
+
+## Сборка статьи
+
+```bash
+make article
+# PDF: build/article.pdf
+```
+
+Компилятор по умолчанию — Tectonic. В GitHub Actions сначала устанавливаются зависимости микробенчмарка и запускаются все тесты, затем статья собирается на Windows с Times New Roman и публикуется как артефакт.
+
+## Исходный шаблон
+
+Основа репозитория — шаблон научной статьи НИТУ «МИСиС» (LaTeX).
 
 LaTeX-шаблон статьи для сборника НИТУ «МИСиС»: XeLaTeX, две колонки.  
 Репозиторий: [sadekovlar/misis-article-latex](https://github.com/sadekovlar/misis-article-latex)
@@ -77,7 +150,7 @@ xelatex article.tex && xelatex article.tex
 
 | Файл | Назначение |
 |------|------------|
-| `article.tex` | Пустой шаблон |
+| `article.tex` | Текст статьи |
 | `misisarticle.cls` | Класс оформления |
 | `example/` | Эталонная статья для проверки класса, в zip для Overleaf не входит |
 | `Makefile` | `make article`, `make example`, `make dist` |
