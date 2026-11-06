@@ -212,7 +212,7 @@
       \vspace{1\baselineskip}
     \end{center}
     \@authorcolumns
-    \vspace{0.2\baselineskip}%
+    \vspace{0.6\baselineskip}%
   ]%
   \ifx\@abstracttext\empty\else
     {\parindent=0.51cm
